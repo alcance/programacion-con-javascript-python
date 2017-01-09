@@ -1,3 +1,17 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Conceptos fundamentales](#conceptos-fundamentales)
+  - [Puntos clave:](#puntos-clave)
+  - [Sintáxis](#sint%C3%A1xis)
+  - [Analizador de Sintaxis (Syntax Parser)](#analizador-de-sintaxis-syntax-parser)
+  - [Ámbito Léxico (Lexical Enviroment)](#%C3%A1mbito-l%C3%A9xico-lexical-enviroment)
+  - [Execution Context](#execution-context)
+  - [Proximos conceptos.](#proximos-conceptos)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 Borrador 8 de Enero del 2017 - Iván E. Martínez Agüero.
 
 ## Conceptos fundamentales
