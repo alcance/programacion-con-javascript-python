@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Progrmación con Javascript y Python</title>
+    
+    <link rel="stylesheet" href="assets/html.css">
+
+  </head>
+  <body data-type="book">
+    <div class="container">
+      <section data-type="chapter" id="javascript-conceptos-fundamentales-p8ygUA4"><h1>Javascript: Conceptos fundamentales</h1>
+<p>Existe una serie de conceptos fundamentales en todos los lenguajes de programaci&#xF3;n. Es importante que comprendas estos conceptos, ya que te ayudar&#xE1;n a entender que sucede al momento de ejecutar tu c&#xF3;digo.</p>
+<p>Definitivamente la mejor forma de aprender cualquier lenguaje es la repetici&#xF3;n. Pr&#xE1;ctica realizando ejercicios, retos, resuelve problemas, etc. Pero, tambi&#xE9;n debes dedicar tiempo en comprender conceptos que suenan complicados, pero realmente no son dificiles de aprender.</p>
+<p>Javascript no est&#xE1; excento de ellos, por lo que &#xE1;ntes de trabajar con tu c&#xF3;digo, te recomiendo analizar y comprender algunos conceptos importantes.</p>
+<section data-type="sect1" id="puntos-clave-jMODUv8"><h1>Puntos clave</h1>
+<p>En esta primera parte vas a comprender tres conceptos:</p>
+<ul>
+<li>Analizador de Sintaxis (Syntax Parsers).</li>
+<li>&#xC1;mbito L&#xE9;xico (Lexical Enviroment).</li>
+<li>Contexto de Ejecuci&#xF3;n (Execution Context).</li>
+</ul>
+</section><section data-type="sect1" id="sintaxis-ZMjvUkM"><h1>Sint&#xE1;xis</h1>
+<blockquote>
+<p>La sint&#xE1;xis de un lenguaje de programaci&#xF3;n describe las combinaciones posibles de los s&#xED;mbolos que forman un programa.</p>
+</blockquote>
+<pre data-type="programlisting" data-code-language="javascript"><code>	[1,5,5].sort(function(){return (4*Math.random()&gt;2)?1:-1});
+</code></pre>
+</section><section data-type="sect1" id="analizador-de-sintaxis-syntax-parser-9MEgUnl"><h1>Analizador de Sintaxis (Syntax Parser)</h1>
+<p>Es un programa que se encarga de leer tu c&#xF3;digo y determina si su  <strong>sintaxis</strong> es correcta.</p>
+<p>El proceso del <strong>syntax parser</strong> es el siguiente:</p>
+<ol>
+<li>Lee tu codigo.</li>
+<li>Verifica que cuenta con una gramatica correcta.</li>
+<li>Traduce a codigo binario para que la computadora pueda comprenderlo.</li>
+</ol>
+<p>Los dos primeros pasos son bastante directos. El tercer paso es interesante, ya que introduce a los conceptos de <code>Compilador</code>e <code>Interprete</code>.</p>
+<p>A grandes rasgos, el c&#xF3;digo que escribes en Javascript, contiene una <strong>sintaxis</strong> f&#xE1;cil de leer para nosotros los humanos, el problema es que para la computadora no significa absolutamente nada. Es donde entra el interprete o en caso de Javascript comunmente lo llaman <code>motor</code> es el encargado de implementar la sintaxis de tu c&#xF3;digo de manera que la computadora pueda entender.</p>
+<p>Dentro de este proceso se encuentra al analizador de sintaxis. Su trabajo es recorrer caracter por caracter tu c&#xF3;digo. &#xC9;l sabe todas las reglas, si debe de existe un espacio o no despu&#xE9;s de un caracter y posteriormente lo traduce al sistema.</p>
+</section><section data-type="sect1" id="ambito-lexico-lexical-enviroment-J8qzUZl"><h1>&#xC1;mbito L&#xE9;xico (Lexical Enviroment)</h1>
+<p>La palabra l&#xE9;xico tiene que ver con palabras o gramatica. Habla del codigo que escribes, su sintaxis, vocabulario.</p>
+<p>Donde algo se posiciona fisicamente en el codigo que se escribe.</p>
+<p>Donde un expresion, declaracion existe en tu codigo.</p>
+<pre data-type="programlisting" data-code-language="javascript"><code>function saludar() {
+  var saludo = &quot;Hola amigos!&quot;;
+  return saludo;
+}
+</code></pre>
+<p>Lexico significa todo lo que tiene que ver con palabras o gramatica</p>
+<p>Donde un expresion, declaracion existe en tu codigo.</p>
+<p>Donde algo se posiciona fisicamente en el codigo que se escribe.</p>
+<p>Lexical significa todo lo que tiene que ver con palabras o gramatica</p>
+<p>Un entorno lexico existe en un lenguaje de programacion en donde escribes algo que es importante.</p>
+<p>Sintaxis, vocabulario.</p>
+<p>Una funcion tiene dentro de ella una variable. La variable se posiciona lexicamente dentro de la funcion.</p>
+<p>Es fisicamente el codigo que escribes, es donde se posiciona.</p>
+<p>El codigo no se entregad direcmqtne a l computadora, si no se que se traduce a algo que la comptuadra deba entenret.</p>
+<p>Te da una idea de en que parte de la memoria se encuentra la parte del codigo que escribes.</p>
+<p>Es importante saber donde pones las cosas.</p>
+<p>Lexical enviromente, donde se escribe y que es lo que lo rodea.</p>
+</section><section data-type="sect1" id="contexto-de-ejecucion-execution-context-24rwUAM"><h1>Contexto de Ejecuci&#xF3;n (Execution Context)</h1>
+<p>Un wrapper que ayuda a administrar el codigo que se esta corriendo.</p>
+<p>Hay muchos lexical enviroments. Pero el que este corriendo en ese momento se llama Contxto de ejecucion el que contiene el codigo que corre.</p>
+<p>Pero tambien puede contener cosas mas alla de lo que escribiste en tu codigo.</p>
+<p>Ya que tu codigo es procesado
+Ejecuta tu codigo y puede hacer otras cosas a su alreddor.</p>
+<p>Lexical enviroments, execution context, syntax parsers</p>
+<p>El contexto de ejecucion global es accesible desde cualquier parte del cdogio</p>
+<p>El motor de Javascript crea
+Un objeto global: <strong>Window</strong> en el navegador y <strong>Process</strong> en NodeJs.
+Una variable especial llamda <code>this</code>
+	Verifica en tu consola de desarrollo que sin Javascript el motor crea un Windows y this los cuales son globales.
+Un link a el outer enviroment
+	- Si tu codigo esta corirendo una funcion, tiene un enlace al outer env</p>
+<p><img src="assets/ExecutionContext.png" alt="Execution Context"></p>
+</section><section data-type="sect1" id="proximos-conceptos-dMb6U9M"><h1>Proximos conceptos</h1>
+<ul>
+<li>Encadenamiento y Hoisting</li>
+<li>Invocaci&#xF3;n de funciones y stacks de ejecucion</li>
+<li>Scope</li>
+</ul>
+<p>Es importante para comprender que pasa por debajo de Javascript</p>
+</section></section>
+<a id="prev-link" href="toc.html">Previous: </a>
+
+    </div>
+  </body>
+</html>
