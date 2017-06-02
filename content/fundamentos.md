@@ -1,4 +1,5 @@
 # Javascript: Conceptos fundamentales
+Iván E. Martínez Agüero
 
 Existe una serie de conceptos fundamentales en todos los lenguajes de programación. Es importante que comprendas estos conceptos, ya que te ayudarán a entender que sucede al momento de ejecutar tu código.
 
